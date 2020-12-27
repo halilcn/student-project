@@ -107,18 +107,19 @@
       <path value="$PROJECT_DIR$/laravel-student/vendor/hamcrest/hamcrest-php" />
       <path value="$PROJECT_DIR$/laravel-student/vendor/doctrine/instantiator" />
       <path value="$PROJECT_DIR$/laravel-student/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/defuse/php-encryption" />
       <path value="$PROJECT_DIR$/laravel-student/vendor/league/event" />
       <path value="$PROJECT_DIR$/laravel-student/vendor/league/oauth2-server" />
-      <path value="$PROJECT_DIR$/laravel-student/vendor/laravel/passport" />
-      <path value="$PROJECT_DIR$/laravel-student/vendor/psr/http-factory" />
-      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/psr-http-message-bridge" />
-      <path value="$PROJECT_DIR$/laravel-student/vendor/firebase/php-jwt" />
-      <path value="$PROJECT_DIR$/laravel-student/vendor/lcobucci/jwt" />
       <path value="$PROJECT_DIR$/laravel-student/vendor/phpseclib/phpseclib" />
       <path value="$PROJECT_DIR$/laravel-student/vendor/php-http/message-factory" />
       <path value="$PROJECT_DIR$/laravel-student/vendor/paragonie/random_compat" />
       <path value="$PROJECT_DIR$/laravel-student/vendor/nyholm/psr7" />
-      <path value="$PROJECT_DIR$/laravel-student/vendor/defuse/php-encryption" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/psr-http-message-bridge" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/laravel/passport" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/laravel/sail" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/psr/http-factory" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />

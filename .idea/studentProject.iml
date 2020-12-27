@@ -11,7 +11,6 @@
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/asm89/stack-cors" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/brick/math" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/composer" />
-      <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/defuse/php-encryption" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/dnoegel/php-xdg-base-dir" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/doctrine/inflector" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/doctrine/instantiator" />
@@ -24,7 +23,6 @@
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/fakerphp/faker" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/fideloper/proxy" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/filp/whoops" />
-      <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/firebase/php-jwt" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/fruitcake/laravel-cors" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/graham-campbell/result-type" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/guzzlehttp/guzzle" />
@@ -32,31 +30,23 @@
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/guzzlehttp/psr7" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/hamcrest/hamcrest-php" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/laravel/framework" />
-      <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/laravel/passport" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/laravel/tinker" />
-      <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/lcobucci/jwt" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/league/commonmark" />
-      <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/league/event" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/league/flysystem" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/league/mime-type-detection" />
-      <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/league/oauth2-server" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/mockery/mockery" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/myclabs/deep-copy" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/nesbot/carbon" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/nikic/php-parser" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/nunomaduro/collision" />
-      <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/nyholm/psr7" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/opis/closure" />
-      <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/paragonie/random_compat" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/phar-io/manifest" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/phar-io/version" />
-      <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/php-http/message-factory" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/phpdocumentor/reflection-common" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/phpdocumentor/reflection-docblock" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/phpdocumentor/type-resolver" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/phpoption/phpoption" />
-      <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/phpseclib/phpseclib" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/phpspec/prophecy" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/phpunit/php-code-coverage" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/phpunit/php-file-iterator" />
@@ -67,7 +57,6 @@
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/psr/container" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/psr/event-dispatcher" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/psr/http-client" />
-      <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/psr/http-factory" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/psr/http-message" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/psr/log" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/psr/simple-cache" />
@@ -113,7 +102,6 @@
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/symfony/polyfill-php73" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/symfony/polyfill-php80" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/symfony/process" />
-      <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/symfony/psr-http-message-bridge" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/symfony/routing" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/symfony/service-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/symfony/string" />
@@ -125,6 +113,19 @@
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/defuse/php-encryption" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/league/event" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/league/oauth2-server" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/phpseclib/phpseclib" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/php-http/message-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/paragonie/random_compat" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/nyholm/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/symfony/psr-http-message-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/firebase/php-jwt" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/laravel/passport" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/lcobucci/jwt" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/laravel/sail" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/psr/http-factory" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
