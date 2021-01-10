@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\RegisterController;
+use App\Http\Controllers\API\TargetResourceController;
 use App\Http\Controllers\API\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -28,6 +29,9 @@ Route::group(['prefix' => '/v1'], function () {
 
         Route::get('/users', []);
         Route::get('/users/id', []);
+
+        Route::resource('targets', TargetResourceController::class);
+
     });
 });
 

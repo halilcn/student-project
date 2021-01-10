@@ -120,6 +120,9 @@
       <path value="$PROJECT_DIR$/laravel-student/vendor/lcobucci/jwt" />
       <path value="$PROJECT_DIR$/laravel-student/vendor/laravel/sail" />
       <path value="$PROJECT_DIR$/laravel-student/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/doctrine/event-manager" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />

@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
-use App\Http\Resources\User as UserResource;
+use App\Http\Resources\UserResource as UserResource;
 
 class RegisterController extends Controller
 {
