@@ -28,5 +28,7 @@ class AppServiceProvider extends ServiceProvider
         Relation::morphMap([
             'school_score' => SchoolScore::class,
         ]);
+
+        \Carbon\Carbon::setLocale('tr');
     }
 }

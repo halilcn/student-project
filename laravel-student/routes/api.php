@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\API\RegisterController;
+use App\Http\Controllers\API\AuthApiController;
 use App\Http\Controllers\API\TargetResourceController;
 use App\Http\Controllers\API\UserController;
 use Illuminate\Http\Request;
@@ -21,16 +21,22 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => '/v1'], function () {
     //Public
-    Route::post('/register', [RegisterController::class, 'store']);
+    Route::post('/register', [AuthApiController::class, 'register']);
 
+    // Auth
     Route::group(['middleware' => 'auth:api'], function () {
+
+        // User
         Route::get('/user', [UserController::class, 'show']);
-        Route::post('/user/update', [UserController::class, 'update']);
+        Route::put('/user/profile', [UserController::class, 'updateProfile']);
+        Route::put('/user/password', [UserController::class, 'updatePassword']);
 
         Route::get('/users', []);
         Route::get('/users/id', []);
 
         Route::resource('targets', TargetResourceController::class);
+
+        Route::post('/logout', [AuthApiController::class, 'logout']);
 
     });
 });

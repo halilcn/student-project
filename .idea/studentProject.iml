@@ -129,6 +129,7 @@
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/doctrine/dbal" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/doctrine/cache" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/doctrine/event-manager" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel-student/vendor/intervention/image" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

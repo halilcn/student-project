@@ -22,8 +22,20 @@ class TargetResourceController extends Controller
      */
     public function index(Request $request)
     {
-        //return $request->user()->targets[0];
-        return TargetResource::collection($request->user()->targets);
+        if ($request->targetsCount) {
+            return TargetResource::collection(
+                $request->user()
+                    ->targets
+                    ->skip($request->targetsCount)
+                    ->take(7)
+            );
+        }
+
+        return TargetResource::collection(
+            $request->user()
+                ->targets
+                ->take(7)
+        );
     }
 
     /**
@@ -44,7 +56,8 @@ class TargetResourceController extends Controller
      */
     public function store(TargetRequest $request)
     {
-        if ($request->type == 'schoolScore') {
+
+        if ($request->type == 'school_score') {
 
             // Create School Score
             $resSchoolScore = SchoolScore::create([
@@ -76,9 +89,11 @@ class TargetResourceController extends Controller
             }
         }
 
-        return response([
-            'status' => 'success'
-        ], 200);
+        return new TargetResource(
+            $request->user()
+                ->targets
+                ->first()
+        );
     }
 
     /**
