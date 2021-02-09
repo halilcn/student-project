@@ -136,8 +136,14 @@ class TargetResourceController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Target $target)
     {
-        //
+        //Yetki varmı? Gerçekten o target'a sahip mi?
+        //**/
+        $target->targetable->delete();
+
+        return response()->json([
+            'status' => 'success'
+        ]);
     }
 }

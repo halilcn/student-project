@@ -21,4 +21,14 @@ class Lesson extends Model
         return $this->hasOne(LessonScore::class);
     }
 
+
+    // Deleting Relationship
+    protected static function boot()
+    {
+        parent::boot();
+        static::deleting(function ($lesson) {
+            $lesson->score->delete();
+        });
+    }
+
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTargetsTable extends Migration
+class CreateLastTargetsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateTargetsTable extends Migration
      */
     public function up()
     {
-        Schema::create('targets', function (Blueprint $table) {
+        Schema::create('last_targets', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->integer('user_id');
-            $table->mediumText('target_type');
-            $table->mediumText('target_id');
+            $table->mediumText('last_target_type');
+            $table->mediumText('last_target_id');
             $table->timestamps();
         });
     }
@@ -29,8 +29,6 @@ class CreateTargetsTable extends Migration
      */
     public function down()
     {
-
-
-        Schema::dropIfExists('targets');
+        Schema::dropIfExists('last_targets');
     }
 }

@@ -16,7 +16,7 @@ class Target extends Model
 
     protected $table = 'targets';
     protected $fillable = [
-        'user_id', 'target_type', 'target_id'
+        'user_id', 'targetable_type', 'targetable_id'
     ];
 
     // $cast date time not working :/
@@ -25,7 +25,7 @@ class Target extends Model
         return Carbon::parse($value)->isoFormat('D MMMM Y');
     }
 
-    public function target(): MorphTo
+    public function targetable (): MorphTo
     {
         return $this->morphTo();
     }

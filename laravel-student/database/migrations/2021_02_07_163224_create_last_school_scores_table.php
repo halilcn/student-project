@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTargetsTable extends Migration
+class CreateLastSchoolScoresTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateTargetsTable extends Migration
      */
     public function up()
     {
-        Schema::create('targets', function (Blueprint $table) {
-            $table->id()->autoIncrement();
-            $table->integer('user_id');
-            $table->mediumText('target_type');
-            $table->mediumText('target_id');
+        Schema::create('last_school_scores', function (Blueprint $table) {
+            $table->id();
+            $table->dateTime('last_target_created_at');
+            $table->integer('lessons_count');
+            $table->integer('success_rate');
             $table->timestamps();
         });
     }
@@ -29,8 +29,6 @@ class CreateTargetsTable extends Migration
      */
     public function down()
     {
-
-
-        Schema::dropIfExists('targets');
+        Schema::dropIfExists('last_school_scores');
     }
 }

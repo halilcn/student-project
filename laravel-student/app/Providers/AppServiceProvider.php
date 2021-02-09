@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\LastSchoolScore;
 use App\Models\SchoolScore;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\ServiceProvider;
@@ -27,6 +28,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Relation::morphMap([
             'school_score' => SchoolScore::class,
+            'last_school_score' => LastSchoolScore::class
         ]);
 
         \Carbon\Carbon::setLocale('tr');

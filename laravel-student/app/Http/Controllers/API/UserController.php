@@ -12,9 +12,12 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
+use App\Traits\StoreImage;
 
 class UserController extends Controller
 {
+    use StoreImage;
+
     public function show(Request $request)
     {
         return new UserResource($request->user());
@@ -23,15 +26,18 @@ class UserController extends Controller
     public function updateProfile(ProfileSettingRequest $request)
     {
         $imagePath = $request->user()->image;
+
         if ($request->hasFile('image')) {
-            $imagePath = 'users/' . rand() . '.jpg';
-            $image = Image::make($request->file('image'))
-                ->resize(400, 400)
-                ->encode('jpg', 80);
-            Storage::disk('public')->put($imagePath, $image);
-            $imagePath = asset($imagePath);
+            //Delete Last Image
+            if (Storage::exists('/users/' . basename($imagePath))) {
+                Storage::delete('/users/' . basename($imagePath));
+            }
+
+            //Create New Image
+            $imagePath = $this->StoreProfileImage($request->file('image'));
         }
 
+        //Update User
         $request->user()->update([
             'image' => $imagePath,
             'name' => $request->input('name', $request->user()->name)
@@ -46,9 +52,13 @@ class UserController extends Controller
     public function updatePassword(PasswordSettingRequest $request)
     {
         if (!(Hash::check($request->password, $request->user()->password))) {
-            return response(['message' => 'Mevcut Şifre Yanlış!'], 401);
+            return response([
+                'message' => 'Mevcut Şifre Yanlış!'
+            ], 401);
         }
 
-        $request->user()->update(['password' => bcrypt($request->newPassword)]);
+        $request->user()->update([
+            'password' => bcrypt($request->newPassword)
+        ]);
     }
 }

@@ -48,11 +48,16 @@ class User extends Authenticatable
     public function targets(): HasMany
     {
         return $this->hasMany(Target::class)
-            ->with('target', function (MorphTo $query) {
+            ->with('targetable', function (MorphTo $query) {
                 $query->morphWith([
                     SchoolScore::class => ['lessons', 'lessons.score']
                 ]);
             })
             ->orderByDesc('id');
+    }
+
+    public function lastTargets(): HasMany
+    {
+        return $this->hasMany(LastTarget::class)->with('lastTargetable')->orderByDesc('id');
     }
 }

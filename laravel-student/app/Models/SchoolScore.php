@@ -30,7 +30,18 @@ class SchoolScore extends Model
 
     public function targets(): MorphMany
     {
-        return $this->morphMany(Target::class, 'target');
+        return $this->morphMany(Target::class, 'targetable');
+    }
+
+    // Deleting Relationship
+
+    protected static function boot()
+    {
+        parent::boot();
+        static::deleting(function ($schoolScore) {
+            $schoolScore->targets->each->delete();
+            $schoolScore->lessons->each->delete();
+        });
     }
 
 

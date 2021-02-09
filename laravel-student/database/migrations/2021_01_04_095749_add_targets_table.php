@@ -14,7 +14,7 @@ class AddTargetsTable extends Migration
     public function up()
     {
         Schema::table('targets', function (Blueprint $table) {
-            // $table->integer('target_id')->change();
+            $table->integer('target_id')->change();
             $table->integer('user_id')->after('id');
         });
 
