@@ -19,7 +19,6 @@ class LastTargetResourceController extends Controller
      */
     public function index(Request $request)
     {
-        // return $request->user()->lastTargets;
         return LastTargetResource::collection($request->user()->lastTargets);
     }
 
@@ -41,6 +40,8 @@ class LastTargetResourceController extends Controller
      */
     public function store(Request $request)
     {
+        //En son eklenmiyordu!!!
+
         $mainTarget = Target::findOrFail($request->targetId);
 
         if ($mainTarget->target_type === 'school_score') {
