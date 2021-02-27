@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="413cd28d-4097-4ac8-8a73-ba7e5e500b90" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/vue-student/src/components/UserTargetsRate/UserProfile.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-student/src/components/UserTargetsRate/UserProfile/ActiveSchoolTarget.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-student/src/components/UserTargetsRate/UserProfile/ActiveTarget.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-student/src/components/UserTargetsRate/UserProfile/LastSchoolTarget.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-student/src/components/UserTargetsRate/UserProfile/LastTarget.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-student/src/components/UserTargetsRate/UserProfile/ProfileRates.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-student/src/components/UserTargetsRate/UserRate.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-student/src/store/modules/UserProfileRate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-student/src/store/modules/UserRate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-student/app/Http/Controllers/API/LastTargetResourceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-student/app/Http/Controllers/API/LastTargetResourceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-student/app/Http/Controllers/API/TargetResourceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-student/app/Http/Controllers/API/TargetResourceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-student/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-student/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-student/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-student/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-student/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-student/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-student" beforeDir="false" afterPath="$PROJECT_DIR$/vue-student" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-student/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue-student/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-student/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue-student/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-student/src/components/MyLastTargets/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-student/src/components/MyLastTargets/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-student/src/components/MyLastTargets/LastSchoolTarget.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-student/src/components/MyLastTargets/LastSchoolTarget.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-student/src/components/Shared/Top.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-student/src/components/Shared/Top.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-student/src/components/Student/HomeMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-student/src/components/Student/HomeMenu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-student/src/components/UserTargetsRate/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-student/src/components/UserTargetsRate/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-student/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-student/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-student/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-student/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-student/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-student/src/store/index.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/laravel-student/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+        <option value="HTTP Public Environment File" />
+        <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/vue-student" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/facade/flare-client-php" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/facade/ignition-contracts" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/facade/ignition" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/composer" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/fruitcake/laravel-cors" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/defuse/php-encryption" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/league/event" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/league/oauth2-server" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/phpseclib/phpseclib" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/php-http/message-factory" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/nyholm/psr7" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/symfony/psr-http-message-bridge" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/laravel/passport" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/laravel/sail" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/laravel-student/vendor/itsgoingd/clockwork" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1khBaaYWL1gjmfZl9M2et5OG3S2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="eslint.code.style.apply.dismiss" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2019.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\halil\www\studentProject\vue-student\src\components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\halil\www\studentProject\vue-student\src\assets" />
+      <recent name="C:\Users\halil\www\studentProject\vue-student" />
+      <recent name="C:\Users\halil\www\studentProject\laravel-student\app\Http\Controllers\APİ" />
+      <recent name="C:\Users\halil\www\studentProject\vue-student\src\components\TargetCreate" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="413cd28d-4097-4ac8-8a73-ba7e5e500b90" name="Default Changelist" comment="" />
+      <created>1606143006600</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606143006600</updated>
+      <workItem from="1606143008364" duration="2150000" />
+      <workItem from="1606205482818" duration="70000" />
+      <workItem from="1606289710312" duration="13526000" />
+      <workItem from="1606309123578" duration="5000" />
+      <workItem from="1607267222890" duration="9228000" />
+      <workItem from="1607283181149" duration="8000" />
+      <workItem from="1607356415453" duration="9462000" />
+      <workItem from="1607413271645" duration="53000" />
+      <workItem from="1607521702530" duration="8815000" />
+      <workItem from="1607587292970" duration="38000" />
+      <workItem from="1607714845913" duration="2249000" />
+      <workItem from="1607764048432" duration="200000" />
+      <workItem from="1607954941013" duration="12426000" />
+      <workItem from="1607974883261" duration="14000" />
+      <workItem from="1608020557472" duration="10686000" />
+      <workItem from="1608051413848" duration="4835000" />
+      <workItem from="1608105844754" duration="6475000" />
+      <workItem from="1608133769400" duration="385000" />
+      <workItem from="1608136197204" duration="1190000" />
+      <workItem from="1608137745310" duration="589000" />
+      <workItem from="1608192181738" duration="23000" />
+      <workItem from="1608212135761" duration="1714000" />
+      <workItem from="1608217151508" duration="2251000" />
+      <workItem from="1608225745902" duration="9000" />
+      <workItem from="1608226611512" duration="4052000" />
+      <workItem from="1608280464503" duration="13000" />
+      <workItem from="1608317832288" duration="1969000" />
+      <workItem from="1608369871009" duration="9000" />
+      <workItem from="1608570292087" duration="836000" />
+      <workItem from="1608622668561" duration="7000" />
+      <workItem from="1608639858214" duration="2793000" />
+      <workItem from="1608651274183" duration="1141000" />
+      <workItem from="1608714237829" duration="2466000" />
+      <workItem from="1608800271218" duration="7595000" />
+      <workItem from="1608826061277" duration="5930000" />
+      <workItem from="1608884614258" duration="5839000" />
+      <workItem from="1608899100198" duration="3926000" />
+      <workItem from="1608913804297" duration="309000" />
+      <workItem from="1608973807653" duration="10757000" />
+      <workItem from="1608998385314" duration="909000" />
+      <workItem from="1609065120537" duration="12792000" />
+      <workItem from="1609084367013" duration="8480000" />
+      <workItem from="1609143605495" duration="10903000" />
+      <workItem from="1609168367820" duration="24000" />
+      <workItem from="1609230351573" duration="10321000" />
+      <workItem from="1609240788270" duration="1405000" />
+      <workItem from="1609267206013" duration="63000" />
+      <workItem from="1609315585071" duration="10241000" />
+      <workItem from="1609341490687" duration="28000" />
+      <workItem from="1609582322263" duration="3784000" />
+      <workItem from="1609587884671" duration="287000" />
+      <workItem from="1609600911171" duration="4686000" />
+      <workItem from="1609665352232" duration="40000" />
+      <workItem from="1609665456769" duration="7957000" />
+      <workItem from="1609673899398" duration="36000" />
+      <workItem from="1609752231509" duration="7956000" />
+      <workItem from="1609784331851" duration="171000" />
+      <workItem from="1609871391670" duration="4365000" />
+      <workItem from="1609925154940" duration="25000" />
+      <workItem from="1609931688220" duration="2873000" />
+      <workItem from="1609956826796" duration="7654000" />
+      <workItem from="1610012690361" duration="73000" />
+      <workItem from="1610183162882" duration="7926000" />
+      <workItem from="1610223763008" duration="3637000" />
+      <workItem from="1610270869228" duration="3480000" />
+      <workItem from="1610291192615" duration="13199000" />
+      <workItem from="1610307166891" duration="1012000" />
+      <workItem from="1610476166892" duration="7091000" />
+      <workItem from="1610557662874" duration="8798000" />
+      <workItem from="1610566798626" duration="12000" />
+      <workItem from="1610701900454" duration="6626000" />
+      <workItem from="1610736605523" duration="1827000" />
+      <workItem from="1611001960792" duration="22000" />
+      <workItem from="1611066102348" duration="7264000" />
+      <workItem from="1611087231074" duration="2532000" />
+      <workItem from="1611230806190" duration="9771000" />
+      <workItem from="1611253082228" duration="5110000" />
+      <workItem from="1611342899148" duration="8107000" />
+      <workItem from="1611423353808" duration="9285000" />
+      <workItem from="1611910039364" duration="7978000" />
+      <workItem from="1611939103210" duration="11204000" />
+      <workItem from="1611996612756" duration="11000" />
+      <workItem from="1612196962558" duration="2081000" />
+      <workItem from="1612203911674" duration="7905000" />
+      <workItem from="1612255399671" duration="13000" />
+      <workItem from="1612443543615" duration="8336000" />
+      <workItem from="1612461479345" duration="218000" />
+      <workItem from="1612469873978" duration="1048000" />
+      <workItem from="1612515658854" duration="13000" />
+      <workItem from="1612537991273" duration="3750000" />
+      <workItem from="1612544035977" duration="9199000" />
+      <workItem from="1612601964296" duration="23000" />
+      <workItem from="1612701838802" duration="18036000" />
+      <workItem from="1612774662028" duration="88000" />
+      <workItem from="1612890980698" duration="41000" />
+      <workItem from="1612891080283" duration="9783000" />
+      <workItem from="1612947203259" duration="70000" />
+      <workItem from="1613214541173" duration="15000" />
+      <workItem from="1613214616175" duration="66000" />
+      <workItem from="1613499108044" duration="2610000" />
+      <workItem from="1613552482673" duration="8000" />
+      <workItem from="1614159475460" duration="725000" />
+      <workItem from="1614160220964" duration="1717000" />
+      <workItem from="1614248106959" duration="180000" />
+      <workItem from="1614248299814" duration="184000" />
+      <workItem from="1614248573587" duration="6495000" />
+      <workItem from="1614270325902" duration="4357000" />
+      <workItem from="1614330436602" duration="4667000" />
+      <workItem from="1614364631129" duration="5554000" />
+      <workItem from="1614420895426" duration="7674000" />
+      <workItem from="1614443703292" duration="6308000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

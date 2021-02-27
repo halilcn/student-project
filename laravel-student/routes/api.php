@@ -4,6 +4,7 @@ use App\Http\Controllers\API\AuthApiController;
 use App\Http\Controllers\API\TargetResourceController;
 use App\Http\Controllers\API\LastTargetResourceController;
 use App\Http\Controllers\API\UserController;
+use App\Http\Controllers\API\UsersRatesResourceController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -37,6 +38,8 @@ Route::group(['prefix' => '/v1'], function () {
 
         Route::resource('targets', TargetResourceController::class);
         Route::resource('last-targets', LastTargetResourceController::class);
+
+        Route::resource('users-rates', UsersRatesResourceController::class);
 
         Route::post('/logout', [AuthApiController::class, 'logout']);
 

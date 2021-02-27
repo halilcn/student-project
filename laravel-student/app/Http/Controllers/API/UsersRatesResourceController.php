@@ -3,14 +3,14 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\LastTargetResource;
-use App\Models\LastSchoolScore;
+use App\Http\Resources\ProfileActiveTargetResource;
+use App\Http\Resources\ProfileLastTargetResource;
 use App\Models\LastTarget;
-use App\Models\Target;
+use App\Models\User;
+use Illuminate\Database\Query\Builder;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class LastTargetResourceController extends Controller
+class UsersRatesResourceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,7 +19,19 @@ class LastTargetResourceController extends Controller
      */
     public function index(Request $request)
     {
-        return LastTargetResource::collection($request->user()->lastTargets);
+        $listType = $request->listType;
+
+
+        $users = User::query()
+            ->select('id', 'name', 'image')
+            ->with([
+                'lastTargets:last_targetable_id,last_targetable_type,user_id',
+                'lastTargets.lastTargetable'
+            ])
+            ->get();
+
+
+        return $users[1];
     }
 
     /**
@@ -40,29 +52,7 @@ class LastTargetResourceController extends Controller
      */
     public function store(Request $request)
     {
-        $target = Target::findOrFail($request->targetId);
-
-        if ($target->targetable_type === 'school_score') {
-            $lessonsCount = $target->targetable->loadCount('lessons')->lessons_count;
-            $successRate = collect($request->targetRates)->sum() / collect($request->targetRates)->count();
-
-            $resLastSchoolScore = LastSchoolScore::create([
-                'last_target_created_at' => $target->updated_at,
-                'lessons_count' => $lessonsCount,
-                'success_rate' => $successRate
-            ]);
-
-            $resLastSchoolScore->lastTarget()->create([
-                'user_id' => Auth::id(),
-                'last_target_type' => 'last_school_score'
-            ]);
-
-            $target->targetable->delete();
-
-            return response()->json([
-                'status' => 'success'
-            ]);
-        }
+        //
     }
 
     /**
@@ -71,9 +61,16 @@ class LastTargetResourceController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request, $id)
     {
-        //
+
+        $user = User::findOrFail($id);
+
+        if ($request->type == 'activeTargets') {
+            return ProfileActiveTargetResource::collection($user->profileActiveTargets);
+        } else if ($request->type == 'lastTargets') {
+            return ProfileLastTargetResource::collection($user->profileLastTargets);
+        }
     }
 
     /**

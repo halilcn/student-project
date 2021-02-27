@@ -12,6 +12,7 @@ use App\Models\Target;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 
 class TargetResourceController extends Controller
 {
@@ -138,10 +139,8 @@ class TargetResourceController extends Controller
      */
     public function destroy(Target $target)
     {
-        //Yetki varmı? Gerçekten o target'a sahip mi?
-        //**/
+        Gate::authorize('destroy-target', $target);
         $target->targetable->delete();
-
         return response()->json([
             'status' => 'success'
         ]);

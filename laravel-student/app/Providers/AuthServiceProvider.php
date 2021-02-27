@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\Target;
+use App\Models\User;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Passport\Passport;
@@ -30,5 +32,15 @@ class AuthServiceProvider extends ServiceProvider
 
         Passport::tokensExpireIn(now()->addDays(7));
         Passport::refreshTokensExpireIn(now()->addDays(14));
+
+
+        //Gates
+
+        //Destroy Target
+        Gate::define('destroy-target', function (User $user, Target $target) {
+            return $user->id === $target->user_id;
+        });
+
+
     }
 }

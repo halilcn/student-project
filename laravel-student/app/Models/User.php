@@ -45,12 +45,28 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function getTargets(): HasMany
+    {
+        return $this->hasMany(Target::class);
+    }
+
     public function targets(): HasMany
     {
-        return $this->hasMany(Target::class)
+        return $this->getTargets()
             ->with('targetable', function (MorphTo $query) {
                 $query->morphWith([
                     SchoolScore::class => ['lessons', 'lessons.score']
+                ]);
+            })
+            ->orderByDesc('id');
+    }
+
+    public function profileActiveTargets(): HasMany
+    {
+        return $this->getTargets()
+            ->with('targetable', function (MorphTo $query) {
+                $query->morphWithCount([
+                    SchoolScore::class => ['lessons']
                 ]);
             })
             ->orderByDesc('id');
@@ -60,4 +76,11 @@ class User extends Authenticatable
     {
         return $this->hasMany(LastTarget::class)->with('lastTargetable')->orderByDesc('id');
     }
+
+    public function profileLastTargets(): HasMany
+    {
+        return $this->hasMany(LastTarget::class)->with('lastTargetable');
+    }
+
+
 }
