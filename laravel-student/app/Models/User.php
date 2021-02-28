@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
+use phpDocumentor\Reflection\Types\String_;
+use Ramsey\Uuid\Type\Integer;
 
 class User extends Authenticatable
 {
@@ -72,15 +74,24 @@ class User extends Authenticatable
             ->orderByDesc('id');
     }
 
+    public function getLastTargets(): HasMany
+    {
+        return $this->hasMany(LastTarget::class);
+    }
+
     public function lastTargets(): HasMany
     {
-        return $this->hasMany(LastTarget::class)->with('lastTargetable')->orderByDesc('id');
+        return $this->getLastTargets()->with('lastTargetable')->orderByDesc('id');
     }
 
     public function profileLastTargets(): HasMany
     {
-        return $this->hasMany(LastTarget::class)->with('lastTargetable');
+        return $this->lastTargets()->with('lastTargetable');
     }
 
+    public function getCountTargets(): String
+    {
+        return $this->getTargets()->count() + $this->getLastTargets()->count();
+    }
 
 }

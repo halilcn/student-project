@@ -4,7 +4,9 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\ProfileActiveTargetResource;
+use App\Http\Resources\ProfileInformationResource;
 use App\Http\Resources\ProfileLastTargetResource;
+use App\Http\Resources\UserTargetResource;
 use App\Models\LastTarget;
 use App\Models\User;
 use Illuminate\Database\Query\Builder;
@@ -21,17 +23,18 @@ class UsersRatesResourceController extends Controller
     {
         $listType = $request->listType;
 
-
         $users = User::query()
             ->select('id', 'name', 'image')
-            ->with([
-                'lastTargets:last_targetable_id,last_targetable_type,user_id',
-                'lastTargets.lastTargetable'
-            ])
+            ->with(
+                [
+                    'lastTargets:last_targetable_id,last_targetable_type,user_id',
+                    'lastTargets.lastTargetable'
+                ]
+            )
+            ->take(5)
             ->get();
 
-
-        return $users[1];
+        return UserTargetResource::collection($users);
     }
 
     /**
@@ -47,7 +50,7 @@ class UsersRatesResourceController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -58,25 +61,29 @@ class UsersRatesResourceController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show(Request $request, $id)
     {
-
         $user = User::findOrFail($id);
-
-        if ($request->type == 'activeTargets') {
-            return ProfileActiveTargetResource::collection($user->profileActiveTargets);
-        } else if ($request->type == 'lastTargets') {
-            return ProfileLastTargetResource::collection($user->profileLastTargets);
+        if ($request->type == 'profile') {
+            return new ProfileInformationResource($user);
+        } else {
+            if ($request->type == 'activeTargets') {
+                return ProfileActiveTargetResource::collection($user->profileActiveTargets);
+            } else {
+                if ($request->type == 'lastTargets') {
+                    return ProfileLastTargetResource::collection($user->profileLastTargets);
+                }
+            }
         }
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -87,8 +94,8 @@ class UsersRatesResourceController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
-     * @param int $id
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -99,7 +106,7 @@ class UsersRatesResourceController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
