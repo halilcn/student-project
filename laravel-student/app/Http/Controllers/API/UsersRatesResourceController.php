@@ -31,6 +31,7 @@ class UsersRatesResourceController extends Controller
                     'lastTargets.lastTargetable'
                 ]
             )
+            ->skip($request->usersSkipCount)
             ->take(5)
             ->get();
 
