@@ -52,41 +52,47 @@ class TargetResourceController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(TargetRequest $request)
     {
-
         if ($request->type == 'school_score') {
-
             // Create School Score
-            $resSchoolScore = SchoolScore::create([
-                'first_exam_percent' => $request->input('lessonPerce.firstExam'),
-                'second_exam_percent' => $request->input('lessonPerce.secondExam'),
-                'total_average' => $request->input('totalAvg')
-            ]);
+            $resSchoolScore = SchoolScore::create(
+                [
+                    'first_exam_percent' => $request->input('lessonPerce.firstExam'),
+                    'second_exam_percent' => $request->input('lessonPerce.secondExam'),
+                    'total_average' => $request->input('totalAvg')
+                ]
+            );
 
-            // TargetResourceController Create
-            $resSchoolScore->targets()->create([
-                'user_id' => Auth::id(),
-            ]);
+            // Create Target
+            $resSchoolScore->targets()->create(
+                [
+                    'user_id' => Auth::id(),
+                ]
+            );
 
             foreach ($request->input('lessons') as $lessonData) {
                 // Create Lesson
-                $resLesson = $resSchoolScore->lessons()->create([
-                    'name' => $lessonData['name'],
-                    'credit' => $lessonData['credit']
-                ]);
+                $resLesson = $resSchoolScore->lessons()->create(
+                    [
+                        'name' => $lessonData['name'],
+                        'credit' => $lessonData['credit']
+                    ]
+                );
 
                 //Create Lesson Score
                 $lessonScoreData = $lessonData['score'];
-                $resLesson->score()->create([
-                    'first_exam' => $lessonScoreData['firstExam'],
-                    'second_exam' => $lessonScoreData['secondExam'],
-                    'average' => $lessonScoreData['avgScore'],
-                    'character' => $lessonScoreData['characterScore']
-                ]);
+                $resLesson->score()->create(
+                    [
+                        'first_exam' => $lessonScoreData['firstExam'],
+                        'second_exam' => $lessonScoreData['secondExam'],
+                        'average' => $lessonScoreData['avgScore'],
+                        'character' => $lessonScoreData['characterScore']
+                    ]
+                );
             }
         }
 
@@ -100,18 +106,17 @@ class TargetResourceController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -122,8 +127,8 @@ class TargetResourceController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
-     * @param int $id
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -134,15 +139,18 @@ class TargetResourceController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy(Target $target)
     {
+        //Check Authority
         Gate::authorize('destroy-target', $target);
         $target->targetable->delete();
-        return response()->json([
-            'status' => 'success'
-        ]);
+        return response()->json(
+            [
+                'status' => 'success'
+            ]
+        );
     }
 }

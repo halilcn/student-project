@@ -3,37 +3,20 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\ProfileActiveTargetResource;
-use App\Http\Resources\ProfileInformationResource;
 use App\Http\Resources\ProfileLastTargetResource;
-use App\Http\Resources\UserTargetResource;
-use App\Models\LastTarget;
 use App\Models\User;
-use Illuminate\Database\Query\Builder;
 use Illuminate\Http\Request;
 
-class UsersRatesResourceController extends Controller
+class UsersRatesLastTargetsController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index(User $user)
     {
-        $users = User::query()
-            ->select('id', 'name', 'image')
-            ->with(
-                [
-                    'lastTargets:last_targetable_id,last_targetable_type,user_id',
-                    'lastTargets.lastTargetable'
-                ]
-            )
-            ->skip($request->usersSkipCount)
-            ->take(5)
-            ->get();
-
-        return UserTargetResource::collection($users);
+        return ProfileLastTargetResource::collection($user->profileLastTargets);
     }
 
     /**
@@ -65,20 +48,7 @@ class UsersRatesResourceController extends Controller
      */
     public function show($id)
     {
-
-        /*
-         *   $user = User::findOrFail($id);
-          if ($request->type == 'profile') {
-              return new ProfileInformationResource($user);
-          } else {
-              if ($request->type == 'activeTargets') {
-                  return ProfileActiveTargetResource::collection($user->profileActiveTargets);
-              } else {
-                  if ($request->type == 'lastTargets') {
-                      return ProfileLastTargetResource::collection($user->profileLastTargets);
-                  }
-              }
-          }*/
+        //
     }
 
     /**

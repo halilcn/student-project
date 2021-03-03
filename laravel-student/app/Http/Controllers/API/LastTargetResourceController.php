@@ -35,7 +35,7 @@ class LastTargetResourceController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -45,30 +45,33 @@ class LastTargetResourceController extends Controller
         if ($target->targetable_type === 'school_score') {
             $lessonsCount = $target->targetable->loadCount('lessons')->lessons_count;
             $successRate = collect($request->targetRates)->sum() / collect($request->targetRates)->count();
-
-            $resLastSchoolScore = LastSchoolScore::create([
-                'last_target_created_at' => $target->updated_at,
-                'lessons_count' => $lessonsCount,
-                'success_rate' => $successRate
-            ]);
-
-            $resLastSchoolScore->lastTarget()->create([
-                'user_id' => Auth::id(),
-                'last_target_type' => 'last_school_score'
-            ]);
-
+            $resLastSchoolScore = LastSchoolScore::create(
+                [
+                    'last_target_created_at' => $target->updated_at,
+                    'lessons_count' => $lessonsCount,
+                    'success_rate' => $successRate
+                ]
+            );
+            $resLastSchoolScore->lastTarget()->create(
+                [
+                    'user_id' => Auth::id(),
+                    'last_target_type' => 'last_school_score'
+                ]
+            );
             $target->targetable->delete();
 
-            return response()->json([
-                'status' => 'success'
-            ]);
+            return response()->json(
+                [
+                    'status' => 'success'
+                ]
+            );
         }
     }
 
     /**
      * Display the specified resource.
      *
-     * @param int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -79,7 +82,7 @@ class LastTargetResourceController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -90,8 +93,8 @@ class LastTargetResourceController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
-     * @param int $id
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -102,7 +105,7 @@ class LastTargetResourceController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

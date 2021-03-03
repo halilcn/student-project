@@ -4,6 +4,9 @@ use App\Http\Controllers\API\AuthApiController;
 use App\Http\Controllers\API\TargetResourceController;
 use App\Http\Controllers\API\LastTargetResourceController;
 use App\Http\Controllers\API\UserController;
+use App\Http\Controllers\API\UsersRatesActiveTargetsController;
+use App\Http\Controllers\API\UsersRatesLastTargetsController;
+use App\Http\Controllers\API\UsersRatesProfileResourceController;
 use App\Http\Controllers\API\UsersRatesResourceController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -20,30 +23,35 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::group(
+    ['prefix' => '/v1'],
+    function () {
+        //<<<<<<<-------------PUBLİC------------->>>>>>>
+        Route::post('/register', [AuthApiController::class, 'register']);
 
-Route::group(['prefix' => '/v1'], function () {
-    //Public
-    Route::post('/register', [AuthApiController::class, 'register']);
+        //<<<<<<<-------------AUTH------------->>>>>>>
+        Route::group(
+            ['middleware' => 'auth:api'],
+            function () {
+                // User
+                Route::get('/user', [UserController::class, 'show']);
+                Route::put('/user/profile', [UserController::class, 'updateProfile']);
+                Route::put('/user/password', [UserController::class, 'updatePassword']);
 
-    // Auth
-    Route::group(['middleware' => 'auth:api'], function () {
+                Route::resource('targets', TargetResourceController::class);
 
-        // User
-        Route::get('/user', [UserController::class, 'show']);
-        Route::put('/user/profile', [UserController::class, 'updateProfile']);
-        Route::put('/user/password', [UserController::class, 'updatePassword']);
+                Route::resource('last-targets', LastTargetResourceController::class);
 
-        Route::get('/users', []);
-        Route::get('/users/id', []);
+                Route::resource('users-rates', UsersRatesResourceController::class);
 
-        Route::resource('targets', TargetResourceController::class);
-        Route::resource('last-targets', LastTargetResourceController::class);
+                Route::resource('users-rates/{user}/profile', UsersRatesProfileResourceController::class);
+                Route::resource('users-rates/{user}/activeTargets', UsersRatesActiveTargetsController::class);
+                Route::resource('users-rates/{user}/lastTargets', UsersRatesLastTargetsController::class);
 
-        Route::resource('users-rates', UsersRatesResourceController::class);
-
-        Route::post('/logout', [AuthApiController::class, 'logout']);
-
-    });
-});
+                Route::post('/logout', [AuthApiController::class, 'logout']);
+            }
+        );
+    }
+);
 
 

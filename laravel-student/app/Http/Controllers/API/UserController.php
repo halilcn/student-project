@@ -13,10 +13,11 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 use App\Traits\StoreImage;
+use App\Traits\DeleteImage;
 
 class UserController extends Controller
 {
-    use StoreImage;
+    use StoreImage, DeleteImage;
 
     public function show(Request $request)
     {
@@ -29,36 +30,44 @@ class UserController extends Controller
 
         if ($request->hasFile('image')) {
             //Delete Last Image
-            if (Storage::exists('/users/' . basename($imagePath))) {
-                Storage::delete('/users/' . basename($imagePath));
-            }
+            $this->DeleteProfileImage($imagePath);
 
             //Create New Image
             $imagePath = $this->StoreProfileImage($request->file('image'));
         }
 
         //Update User
-        $request->user()->update([
-            'image' => $imagePath,
-            'name' => $request->input('name', $request->user()->name)
-        ]);
+        $request->user()->update(
+            [
+                'image' => $imagePath,
+                'name' => $request->input('name', $request->user()->name)
+            ]
+        );
 
-        return response([
-            'image' => $imagePath,
-            'name' => $request->user()->name
-        ], 200);
+        return response(
+            [
+                'image' => $imagePath,
+                'name' => $request->user()->name
+            ],
+            200
+        );
     }
 
     public function updatePassword(PasswordSettingRequest $request)
     {
         if (!(Hash::check($request->password, $request->user()->password))) {
-            return response([
-                'message' => 'Mevcut Şifre Yanlış!'
-            ], 401);
+            return response(
+                [
+                    'message' => 'Mevcut Şifre Yanlış!'
+                ],
+                401
+            );
         }
 
-        $request->user()->update([
-            'password' => bcrypt($request->newPassword)
-        ]);
+        $request->user()->update(
+            [
+                'password' => bcrypt($request->newPassword)
+            ]
+        );
     }
 }

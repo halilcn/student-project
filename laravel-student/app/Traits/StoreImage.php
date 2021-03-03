@@ -11,7 +11,6 @@ use PhpParser\Node\Scalar\String_;
 
 trait StoreImage
 {
-
     function StoreProfileImage($file): string
     {
         $imagePath = 'users/' . Str::random() . '.jpg';
@@ -21,5 +20,4 @@ trait StoreImage
         Storage::put($imagePath, $image);
         return asset('storage/' . $imagePath);
     }
-
 }

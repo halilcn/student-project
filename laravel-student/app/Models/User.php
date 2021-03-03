@@ -55,22 +55,32 @@ class User extends Authenticatable
     public function targets(): HasMany
     {
         return $this->getTargets()
-            ->with('targetable', function (MorphTo $query) {
-                $query->morphWith([
-                    SchoolScore::class => ['lessons', 'lessons.score']
-                ]);
-            })
+            ->with(
+                'targetable',
+                function (MorphTo $query) {
+                    $query->morphWith(
+                        [
+                            SchoolScore::class => ['lessons', 'lessons.score']
+                        ]
+                    );
+                }
+            )
             ->orderByDesc('id');
     }
 
     public function profileActiveTargets(): HasMany
     {
         return $this->getTargets()
-            ->with('targetable', function (MorphTo $query) {
-                $query->morphWithCount([
-                    SchoolScore::class => ['lessons']
-                ]);
-            })
+            ->with(
+                'targetable',
+                function (MorphTo $query) {
+                    $query->morphWithCount(
+                        [
+                            SchoolScore::class => ['lessons']
+                        ]
+                    );
+                }
+            )
             ->orderByDesc('id');
     }
 
@@ -89,7 +99,7 @@ class User extends Authenticatable
         return $this->lastTargets()->with('lastTargetable');
     }
 
-    public function getCountTargets(): String
+    public function getCountTargets(): string
     {
         return $this->getTargets()->count() + $this->getLastTargets()->count();
     }
