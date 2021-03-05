@@ -5,36 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="413cd28d-4097-4ac8-8a73-ba7e5e500b90" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/laravel-student/app/Traits/DeleteImage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-student/src/components/UserTargetsRate/UserProfile/ActiveSchoolTarget.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-student/src/components/UserTargetsRate/UserProfile/ActiveTarget.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-student/src/components/UserTargetsRate/UserProfile/LastSchoolTarget.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-student/src/components/UserTargetsRate/UserProfile/LastTarget.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-student/src/components/UserTargetsRate/UserProfile/ProfileRates.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-student/src/components/UserTargetsRate/UserRate.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-student/src/store/modules/UserProfileRate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-student/src/store/modules/UserRate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitmodules" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-student/app/Http/Controllers/API/AuthApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-student/app/Http/Controllers/API/AuthApiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-student/app/Http/Controllers/API/LastTargetResourceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-student/app/Http/Controllers/API/LastTargetResourceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-student/app/Http/Controllers/API/TargetResourceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-student/app/Http/Controllers/API/TargetResourceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-student/app/Http/Controllers/API/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-student/app/Http/Controllers/API/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-student/app/Http/Controllers/API/UsersRatesResourceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-student/app/Http/Controllers/API/UsersRatesResourceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-student/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-student/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-student/app/Traits/StoreImage.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-student/app/Traits/StoreImage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel-student/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-student/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-student" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-student/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue-student/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-student/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue-student/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-student/src/components/MyLastTargets/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-student/src/components/MyLastTargets/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-student/src/components/MyLastTargets/LastSchoolTarget.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-student/src/components/MyLastTargets/LastSchoolTarget.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-student/src/components/Shared/Top.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-student/src/components/Shared/Top.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-student/src/components/Student/HomeMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-student/src/components/Student/HomeMenu.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-student/src/components/UserTargetsRate/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-student/src/components/UserTargetsRate/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-student/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-student/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-student/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-student/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-student/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-student/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-student" beforeDir="false" afterPath="$PROJECT_DIR$/vue-student" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -357,7 +329,7 @@
       <workItem from="1614587860136" duration="6022000" />
       <workItem from="1614594132787" duration="54000" />
       <workItem from="1614675108301" duration="4648000" />
-      <workItem from="1614763716324" duration="5067000" />
+      <workItem from="1614763716324" duration="6130000" />
     </task>
     <servers />
   </component>
