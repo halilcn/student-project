@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="413cd28d-4097-4ac8-8a73-ba7e5e500b90" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-student" beforeDir="false" afterPath="$PROJECT_DIR$/vue-student" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +175,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="eslint.code.style.apply.dismiss" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../testProject" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -329,7 +328,8 @@
       <workItem from="1614587860136" duration="6022000" />
       <workItem from="1614594132787" duration="54000" />
       <workItem from="1614675108301" duration="4648000" />
-      <workItem from="1614763716324" duration="6130000" />
+      <workItem from="1614763716324" duration="8201000" />
+      <workItem from="1615060884340" duration="24000" />
     </task>
     <servers />
   </component>
